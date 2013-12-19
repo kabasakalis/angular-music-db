@@ -1,0 +1,24 @@
+2013/12/17 23:22:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apps/ng-ts-seed".' in /media/sf_uvhosts/frameworks/yii_1.1.14/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/sf_uvhosts/frameworks/yii_1.1.14/framework/web/CWebApplication.php(141): CWebApplication->runController('apps/ng-ts-seed')
+#1 /media/sf_uvhosts/frameworks/yii_1.1.14/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /media/sf_uvhosts/rest.dev/index.php(40): CApplication->run()
+#3 {main}
+REQUEST_URI=/apps/ng-ts-seed
+---
+2013/12/17 23:22:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "libs/bootstrap/assets/ico/favicon.png".' in /media/sf_uvhosts/frameworks/yii_1.1.14/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/sf_uvhosts/frameworks/yii_1.1.14/framework/web/CWebApplication.php(141): CWebApplication->runController('libs/bootstrap/...')
+#1 /media/sf_uvhosts/frameworks/yii_1.1.14/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /media/sf_uvhosts/rest.dev/index.php(40): CApplication->run()
+#3 {main}
+REQUEST_URI=/libs/bootstrap/assets/ico/favicon.png
+---
+2013/12/18 10:08:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "libs/bootstrap/assets/ico/favicon.png".' in /media/sf_uvhosts/frameworks/yii_1.1.14/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/sf_uvhosts/frameworks/yii_1.1.14/framework/web/CWebApplication.php(141): CWebApplication->runController('libs/bootstrap/...')
+#1 /media/sf_uvhosts/frameworks/yii_1.1.14/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /media/sf_uvhosts/rest.dev/index.php(40): CApplication->run()
+#3 {main}
+REQUEST_URI=/libs/bootstrap/assets/ico/favicon.png
+---

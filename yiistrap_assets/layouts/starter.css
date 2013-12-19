@@ -1,0 +1,11 @@
+/**
+ *  File starter.css in Project  Yii App
+ *  Date: October 20 th 2013 , 9:38 AM
+ *  Author Spiros Kabasakalis , kabasakalis@gmail.com
+ *  Github https://github.com/drumaddict
+ * InfoWebSphere,http://iws.kabasakalis.gr
+ * YiiLab,http://yiilab.kabasakalis.tk
+ */
+body {
+    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}

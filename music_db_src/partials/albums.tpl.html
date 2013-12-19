@@ -1,0 +1,49 @@
+<h1 class="page-header">Albums by {{vm.artist.name}}</h1>
+<a ui-sref="album-form({artist_id:vm.artist.id,album_id:'new'})"   type="button" class="btn btn-info   btn-lg"><i class="glyphicon glyphicon-plus"> Add </i></a>
+<hr>
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Search</label>
+        <div class="col-sm-10">
+            <input ng-disabled="$state.current.name != 'albums'"  placeholder="Search..." type="text"   class="form-control" ng-model="query" ng-change="vm.queryChanged(query)">
+        </div>
+    </div>
+</form>
+<table at-table    class="table table-hover" at-pagination="albumPagination" fill-last-page>
+    <thead></thead>
+    <tbody>
+    <tr>
+        <td style="max-width:260px;word-wrap:break-word" at-implicit sortable initial-sorting="asc" class="" attribute="name"></td>
+        <td style="max-width:60px;" at-implicit sortable class=""  title="Year" attribute="year_release"></td>
+<!--        <td    sortable title="Genre"  class="" attribute="genre.name">
+            {{item.genre.name}}
+        </td>-->
+        <td class="56px">
+            <button ui-sref="album-form({artist_id:vm.artist.id,album_id:item.id})" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"> </i> Edit</button>
+        </td>
+        <td class="56px">
+            <button  ng-click="$event.stopPropagation();vm.onDeleteButtonClick(item.id)"  class="btn btn-danger btn-xs"  ng-disabled="$state.current.name != 'albums'"><i class="glyphicon glyphicon-remove-sign"></i>  Delete</button>
+        </td>
+        <td  class="56px">
+            <button  ui-sref="tracks({artist_id:vm.artist.id,album_id:item.id})"  class="btn btn-info btn-xs"><i class="glyphicon glyphicon-music"></i>  Tracks</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th><h2>{{vm.selectedalbum.name}}</h2></th>
+        <th ng-if="vm.isAlbumSelected">   <button ui-sref="albums({id:selectedAlbum.id})"     class="btn btn-info btn-large pull-right"><i class="glyphicon glyphicon-music"></i> Albums</button></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{vm.selectedAlbum.description}}</td>
+    </tr>
+    </tbody>
+</table>
+<at-pagination items-per-page="10" instance="albumPagination" list="filteredAlbums"></at-pagination>
+
+
+

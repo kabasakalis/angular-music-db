@@ -1,0 +1,18 @@
+{
+ "name": "angular-music-db",
+"version": "1.0.0",
+ "dependencies": {
+"angular": "1.2.5",
+"angular-animate":"1.2.5",
+"angular-mocks":"1.2.5",
+"bootstrap-css":"3.0.0",
+"bootswatch":"3.0.3",
+ "angularjs-country-select":"",
+"jquery": "2.0.3",
+"noty":"2.2.0",
+"requirejs":"2.1.9",
+"restangular" : "1.2.1",
+ "spinjs":"1.3.0",
+"underscore" :"1.5.2"
+ }
+}

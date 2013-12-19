@@ -1,0 +1,125 @@
+<h1 ng-if="vm.create_new" class="page-header">Add New Artist </h1>
+<h1 ng-if="!vm.create_new" class="page-header">Edit Artist {{vm.original_artist.name}}</h1>
+<ng-form class="form-horizontal" role="form" name="artistForm">
+    <div class="form-group " ng-class="{'has-error': vm.hasError().name._any}">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+
+        <div class="col-sm-10">
+            <input ng-model="vm.artist.name"
+                   name="name"
+                   required
+                   ng-minlength=3
+                   ng-maxlength=50
+                   type="text"
+                   class="form-control"
+                   id="name"
+                   placeholder="Artist's Name">
+
+            <div class="help-block" ng-show="vm.hasError().name._any">
+                <small class="col-sm-10" ng-show="vm.hasError().name.required">
+                    {{vm.hasError().name.required_msg}}
+                </small>
+                <small class="col-sm-10" ng-show="vm.hasError().name.minmax">
+                    {{vm.hasError().name.minmax_msg}}
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="form-group" ng-class="{'has-error': vm.hasError().description._any}">
+        <label for="description" class="col-sm-2 control-label">Description</label>
+
+        <div class="col-sm-10">
+            <textarea ng-model="vm.artist.description"
+                      name="description"
+                      type="textarea"
+                      ng-minlength=10
+                      ng-maxlength=1024
+                      class="form-control"
+                      id="description"
+                      placeholder="Artist Description">
+            </textarea>
+
+            <div class="help-block" ng-show="vm.hasError().description._any">
+                <small class="col-sm-10" ng-show="vm.hasError().description.minmax">
+                    {{vm.hasError().description.minmax_msg}}
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="form-group" ng-class="{'has-error': vm.hasError().year_formed._any }">
+        <label for="year_formed" class="col-sm-2 control-label">Year Formed</label>
+
+        <div class="col-sm-10">
+            <input ng-model="vm.artist.year_formed"
+                   name="year_formed"
+                   ng-pattern="/^[0-9]+$/"
+                   ng-minlength=4
+                   ng-maxlength=4
+                   class="form-control"
+                   id="year_formed"
+                   placeholder="Year">
+
+            <div class="help-block" ng-show="vm.hasError().year_formed._any">
+                <small class="col-sm-10" ng-show="vm.hasError().year_formed.minmax">
+                    {{vm.hasError().year_formed.minmax_msg}}
+                </small>
+                <small class="col-sm-10" ng-show="vm.hasError().year_formed.numeric">
+                    {{vm.hasError().year_formed.numeric_msg}}
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="country" class="col-sm-2 control-label">Country</label>
+
+        <div class="col-sm-10">
+            <country-select
+                    required
+                    data-ng-model="vm.artist.country"
+                    class="form-control"
+                    id="country">
+            </country-select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="country" class="col-sm-2 control-label">Genre</label>
+
+        <div class="col-sm-10">
+            <select
+                    ng-model="vm.artist.genre_id"
+                    ng-options="genre.id as genre.name for genre in genres"
+                    required
+                    class="form-control"
+                    id="genre"
+                    >
+                <option value="">-- Choose Genre --</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button
+                    ng-disabled="vm.hasError().form"
+                    execute-click-once="vm.saveArtist()"
+                    type="submit"
+                    class="btn btn-default">
+                <i class="glyphicon glyphicon-save"> Save</i>
+            </button>
+            <button
+                    ng-click="vm.reset()"
+                    class="btn btn-default">
+                <i class="glyphicon glyphicon-repeat"> Reset</i>
+            </button>
+            <button
+                    ui-sref="index"
+                    class="btn btn-default">
+                <i class="glyphicon glyphicon-backward"> Cancel</i>
+            </button>
+        </div>
+    </div>
+</ng-form>
+
+<h3>Artist Object </h3>
+<pre>   {{vm.artist | json}}</pre>
+

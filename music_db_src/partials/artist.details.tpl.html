@@ -1,0 +1,40 @@
+<h1 class="page-header">{{artist.name}}</h1>
+<table class="table table-bordered">
+    <thead>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="col-sm-2"><b>Country</b></td>
+        <td>{{artist.country}}</td>
+    </tr>
+    <tr>
+        <td><b>Year</b></td>
+        <td>{{artist.year_formed}}</td>
+    </tr>
+    <tr>
+        <td><b>Genre</b></td>
+        <td>{{artist.genre.name}}</td>
+    </tr>
+    <tr>
+        <td><b>Description</b></td>
+        <td>{{artist.description}}</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <a ui-sref="albums({artist_id:artist.id})" type="button" class="btn btn-info   btn-lg "><i
+                class="glyphicon glyphicon-music"> Albums </i></a>
+            <a ui-sref="artist-form({artist_id:artist.id})" type="button" class="btn btn-primary   btn-lg ">
+                <i class="glyphicon glyphicon-edit">  Edit </i></a>
+            <a ui-sref="index" type="button" class="btn btn-primary   btn-lg ">
+                <i class="glyphicon glyphicon-step-backward">  Back To Artists</i></a>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
