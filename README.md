@@ -75,7 +75,8 @@ _It is recommended that you stick with the dependency versions declared in ```pa
 
 _Please consider that my instructions are based on my Windows7 development environment,I guess most of it is valid no matter what your environment is._
 
-
+## LICENSE
+Angular Music Database is released under the [WTFPL](http://sam.zoy.org/wtfpl/) license.This means that you can literally do whatever you want with this software.
 
 ## RESOURCES
 
