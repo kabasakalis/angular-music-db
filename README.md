@@ -49,7 +49,7 @@ _PHP version 5.4 at least is required.This is a requirement for RestFullYii exte
 - If you take a look inside ```index.html```,you will notice that there is only one script tag that loads ```loader.js```.[requirejs](http://requirejs.org/) loads all javascript files in the right order based on ```loader.js``` requirejs configuration.
 
 ## Tests
-[Karma Test Runner](http://karma-runner.github.io/) is used to run the tests.They are written for [Jasmine](http://pivotal.github.io/jasmine/).
+[Karma Test Runner](http://karma-runner.github.io/) is used to run the tests.They are written for [Jasmine](https://jasmine.github.io/).
 
 ### Unit Tests
 Unit tests are located in ```test\unit ``` folder.```test\karma-unit.conf.js ``` is the configuration file and you don't need to change anything in it,at least for starters.There is a sample unit test  for Resource.Resource is the class that makes all API calls to Yii.The test uses AngularJS's [$httpBackend](http://docs.angularjs.org/api/ngMock.$httpBackend) to fake a backend.To run the unit tests,in your command line,run ```grunt test:unit ```.
@@ -96,7 +96,7 @@ Angular Music Database is released under the [WTFPL](http://sam.zoy.org/wtfpl/) 
 * [angular-table](https://github.com/ssmm/angular-table)
 * [John Lindquist's Egghead.io](http://www.youtube.com/playlist?list=PLP6DbQBkn9ymGQh2qpk9ImLHdSH5T7yw7)
 * [YearOfMoo](http://www.yearofmoo.com)
-* [Jasmine](http://pivotal.github.io/jasmine/)
+* [Jasmine](https://jasmine.github.io/)
 * [Karma Test Runner](http://karma-runner.github.io/)
 * [Protractor](https://github.com/angular/protractor)
 * [Toastr](http://codeseven.github.io/toastr/)
