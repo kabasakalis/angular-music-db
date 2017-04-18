@@ -1,4 +1,4 @@
-#Angular Music Database
+# Angular Music Database
 
 >One-page Web Application built with [AngularJS](http://angularjs.org/),[TypeScript](http://typescriptlang.org),and [Yii framework](http://www.yiiframework.com/).
 
